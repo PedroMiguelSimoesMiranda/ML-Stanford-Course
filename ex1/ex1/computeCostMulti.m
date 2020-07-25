@@ -14,7 +14,13 @@ J = 0;
 %               You should set J to the cost.
 
 
+% J(theta) = (1/(2*m))*sum(squared errors);
 
+hypothesis = X*theta; % predictions of hypothesis
+
+squared_errors = (hypothesis - y).^2; 
+
+J = (1/(2*m))*sum(squared_errors);
 
 
 % =========================================================================
