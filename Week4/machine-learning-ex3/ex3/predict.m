@@ -42,7 +42,9 @@ X = [ones(size(X,1),1), X];
 
 % X contains units in rows, Theta1 contains units in rows, so we must 
 % make Theta1 a transpose so that unit is computed with corresponding unit
-ZLayer2 = X * Theta1';
+% Personal note: to know why we need to multiply X * Theta1' 
+% and go to the notebook and check out AND OR examples, check the z parameter g(z)
+ZLayer2 = X * Theta1'; 
 HLayer2 = sigmoid(ZLayer2); % H layer 2 or hypothesis layer 2 matrix containing outputs of layer 2
 
 % Theta2 is 10x26 (we have a bias unit weight here so we must add a bias unit to action unit matrix HLayer2)
